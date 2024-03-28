@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<h1>Años de FIFA Mundiales </h1>
+<script >
+	function salto() {
+
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+	}
+	function imprimir(frase){
+
+		document.write(frase);
+		salto();
+	}
+var anhomundial= 1930;
+imprimir("En el siguiente año hubieron mundiales:" + anhomundial);
+
+var limite= parseInt(prompt("Ingrese el año limite para calcular"));
+
+while(anhomundial<limite){
+	imprimir("hubo mundial FIFA en el año: " + anhomundial);
+anhomundial= anhomundial + 4;
+ 
+}
+
+
+imprimir("fin");
+
+
+
+
+
+
+</script>

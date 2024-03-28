@@ -1,0 +1,105 @@
+<meta charset ="UTL-8">
+
+<h1>PROGRAMA DE CALCULO IMC</h1>
+<script>
+     
+function saltarlinea() {
+     document.write("<br>");
+     document.write("<br>");
+     document.write("<br>");
+}
+function imprimir (frase){
+     document.write(frase);
+saltarlinea();
+
+
+}
+function calcularImc(peso,altura) {
+
+imc  =peso/ (altura*altura);
+return(imc);
+
+
+
+}
+
+pesoGaby =58
+alturaGaby = 1.72
+IMCGaby  =pesoGaby/(alturaGaby*alturaGaby)
+
+imprimir("El imc de gaby es : " + IMCGaby);
+
+pesoRodrigo =58
+alturaRodrigo = 1.72
+IMCRodrigo  =pesoRodrigo/(alturaRodrigo*alturaRodrigo)
+
+imprimir("El imc de gaby es : " + IMCRodrigo);
+
+pesoTobie = 34
+alturaTobie= 1.7
+ //ImcTobie=pesoTobie/(alturaTobie*alturaTobie)
+imcTobie=calcularImc(pesoTobie,alturaTobie);
+imprimir("El IMC de Tobie es :" + imcTobie);
+
+</script>
+<script >
+     function calcularIMC (peso,altura,nombre)
+{
+     imcTobie= peso / (altura * altura);
+    imprimir("el indice de masa calculado " + nombre  + " es: " + imc);
+     }
+     calcularIMC(34,1.2,"Tobie");
+
+     
+</script>
+<script >
+    
+    function saltarline(){
+     document.write("<br>");
+     document.write("<br>");
+     document.write("<br>");
+
+    }
+function imprimir(frase){
+     document.write(frase);
+     saltarline();
+}
+
+
+function calcularIMC(peso1,altura1,nombre1,peso2,altura2,nombre2) {
+imc1 = peso1 / (altura1*altura1);
+imc2 = peso2 / (altura2*altura2);
+
+imprimir("el promedio imc al calcular " + nombre1 + " y " + nombre2+ " es: " + (imc1 +imc2)/2 );
+}
+calcularIMC(44,1.60,"Alvaro",50,1.67, "cesar");
+
+calcularIMC(60,1.68,"Randall",50,1.56,"Robert");
+
+</script>
+<script >
+     function altar(){
+
+          document.write("<br");
+          document.write("<br");
+
+     }
+     function imprimir(frase){
+
+     document.write(frase);
+     altar();
+
+     }
+function calcular(peso,altura) { 
+
+imc3 = peso /(altura*altura) ;
+return imc 
+
+
+}
+var Pauloimc = calcular(65,1.65);
+var Tommyimc = calcular(56,1.56);
+
+
+imprimir("el proceso de calcular imc de Paulo y Tommy "+ (calcular(65,1.65)+calcular(56,1.56) / 2));
+</script>

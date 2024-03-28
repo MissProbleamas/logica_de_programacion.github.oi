@@ -1,0 +1,56 @@
+ <meta charset="UTF-8">
+
+ <input/>
+ <button>verifica usted acerto el juego</button>
+ 
+ <script >
+	function numerosdiferentes(){
+		Math.round(Math.random()*10);
+
+	}
+	function numerosorteo(cantidad) {
+		var juegos=[];
+		var contador= 1;
+		while(contador<=cantidad){
+
+            numerosorteo= numerosdiferentes();
+            juegos.push(numerosorteo);
+		    contador++;
+
+		    }
+		    return juegos;
+
+	}
+//var juego =	Math.round(Math.random()*10);
+//var juegos= [12,2,5,8,9];
+	var juegos = numerosorteo(4);//[];
+	//juegos.push(numerosdiferentes());
+	//juegos.push(numerosdiferentes());
+	//juegos.push(numerosdiferentes());
+	//juegos.push(numerosdiferentes());
+console.log(juegos);
+
+	//juegos.push(Math.round(Math.random()*10));
+	//juegos.push(Math.round(Math.random()*10));
+	//juegos.push(Math.round(Math.random()*10));
+	//juegos.push(Math.round(Math.random()*10));
+
+var input = document.querySelector("input");
+input.focus();
+
+function verificar() {
+
+var encontrado = false;
+	for ( var posicion = 0; posicion < juegos.lenhgt; posicion++){
+		
+		if (parseInt(input.value) == juegos[posicion]) {
+          
+           alert("Usted acerto");
+           encontrado = true;
+           break;
+	}
+	input.focus();
+}
+	var button = document.querySelector("button");
+button.onclick= verificar;
+</script>

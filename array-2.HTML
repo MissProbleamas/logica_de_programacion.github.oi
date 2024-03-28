@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+
+<input/>
+
+<script>
+
+	function numerosdiferentes() {
+
+		return Math.round(Math.random()*10);
+
+	}
+	function numerosorteo(cantidad) {
+		var juegos=[];
+		var contador= 1;
+		
+		while(contador <= cantidad) {
+
+            var numerosorteo= numerosdiferentes();
+            console.log(numerosorteo);
+            var encontrado = false;
+            	if (numerosorteo != 0){
+				for (var posicion = 0; posicion < juegos.length; posicion++) {
+					if (numerosorteo == juegos[posicion]) {
+						encontrado = true;
+						break;
+					}
+				}
+				
+				if (encontrado == false) {
+					juegos.push(numerosorteo);
+					contador++;
+				}
+      
+      }
+
+		    }
+
+		    return juegos
+
+	var juegos = numerosorteo(4);
+
+console.log(juegos);
+
+
+
+var input = document.querySelector("input");
+input.focus();
+
+function verificar() {
+
+var encontrado = false;
+	for ( var posicion = 0; posicion < juegos.length; posicion++){
+		
+		if (parseInt(input.value) == juegos[posicion]) {
+          
+           alert("Usted acerto");
+           encontrado = true;
+           break;
+
+	          }
+	}
+
+		if (encontrado == false) {
+
+			alert("Uster erró");
+
+		}
+
+	input.value = "";
+		input.focus();
+
+ }
+ 
+	var button = document.querySelector("button");
+    button.onclick= verificar;
+ </script>
